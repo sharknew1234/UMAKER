@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    {{fb.title}}
+{% endblock %}
+
+{% block b %}
+<style>
+    .d1 {
+        background: rgb(33, 159, 17);
+    }
+</style>
+<div class="containers d1">
+    <h1>{{fb.title}}</h1>
+    <h1>{{fb.email}}</h1>
+    <h1>{{fb.text}}</h1>
+</div>
+{% endblock %}

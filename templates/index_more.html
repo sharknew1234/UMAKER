@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    {{pr.title}}
+{% endblock %}
+
+{% block b %}
+<style>
+    .d2 {
+        background: rgb(33, 159, 17);
+    }
+</style>
+<div class="containers d2">
+    <h1>{{pr.title}}</h1>
+    <h1>{{pr.price}}₼</h1>
+    <h2>{{pr.cat}}</h2>
+    <h1>{{pr.info}}</h1>
+</div>
+<a href="/s" class="btn btn-danger">Sifariş</a>
+{% endblock %}

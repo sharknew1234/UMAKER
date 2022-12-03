@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    Admin
+{% endblock %}
+
+{% block b %}
+<div>
+    <form method="post" enctype="multipart/form-data">
+        <input type="text" name="title" class="form form-control" placeholder="Title"><br>
+        <input type="text" name="price" class="form form-control" placeholder="Price"><br>
+        <textarea name="info" cols="30" rows="10" class="form form-control" placeholder="Text"></textarea><br>
+        <input type="text" name="category" class="form form-control" placeholder="Category"><br>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+    <h1 style="color: white;">Contact</h1>
+    <h3 style="color: white;">______________________________________________________________________________</h3>
+    {% for i in fbs %}
+        <a href="!TwxAQ*y!6/{{i.id}}" class="btn btn-success">{{i.email}}</a><br><br>
+    {% endfor %}
+    <h1 style="color: white;">Sell</h1>
+    <h3 style="color: white;">______________________________________________________________________________</h3>
+    {% for s in sl %}
+        <a class="btn btn-success">Phone:{{s.phone}}||Unvan:{{s.unvan}}||Ad,soyad,ata adı:{{s.fio}}||Rayon, Şəhər:{{s.loc}}<a href="{{s.link}}" class="btn btn-success" target="_blank">{{s.link}}</a></a><br><br>
+    {% endfor %}
+</div>
+{% endblock %}

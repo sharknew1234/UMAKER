@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    Contact
+{% endblock %}
+
+{% block b %}
+<div>
+    <div class="d1">
+        <a href="/" class="btn btn-success">Home</a>
+    </div>
+    {% for fl in f %}
+            <h1 class="btn btn-warning">{{fl.name}}:{{fl.t}}</h1><br>
+    {% endfor %}
+    <form method="post">
+        <input type="text" name="name" class="form form-control" placeholder="Ad"><br>
+        <textarea name="t" cols="30" rows="10" class="form form-control" placeholder="Tekst"></textarea><br>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+</div>
+{% endblock %}

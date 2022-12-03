@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    Contact
+{% endblock %}
+
+{% block b %}
+<div>
+    <form method="post">
+        <input type="text" name="title" class="form form-control" placeholder="Title"><br>
+        <input type="text" name="email" class="form form-control" placeholder="Email"><br>
+        <textarea name="text" cols="30" rows="10" class="form form-control" placeholder="Text"></textarea><br>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+</div>
+{% endblock %}

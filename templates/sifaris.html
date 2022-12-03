@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    Sifariş
+{% endblock %}
+
+{% block b %}
+<div>
+    <form method="POST">
+        <input type="text" placeholder="Ad, soyad, ata adı" class="form form-control" name="fio"><br>
+        <input type="text" name="Phone" class="form form-control" placeholder="Telefon nömrə"><br>
+        <input type="text" name="Link" class="form form-control" placeholder="Link"><br>
+        <input type="text" name="Location" class="form form-control" placeholder="Şəhər, Rayon"><br>
+        <input type="text" name="unvan" class="form form-control" placeholder="Ünvan"><br>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+</div>
+{% endblock %}

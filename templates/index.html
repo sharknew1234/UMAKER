@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block tit %}
+    Home
+{% endblock %}
+
+{% block b %}
+<style>
+    #b{
+        width: 600px;
+        text-align: center;
+        margin-left: 500px;
+    }
+</style>
+<div class="d1">
+    <a href="/book" class="btn btn-success">Book</a>
+</div>
+<div class="d1">
+    <form method="get">
+        <input id="b" size="55" type="text" name="q" placeholder="Search" class="form form-control" value="{{ request.args.get('q', '') }}" style="background: rgb(55, 50, 50); color: beige;">
+        <button type="submit" class="btn btn-dark" style="margin-left: 75px;">Search</button>
+    </form>
+    <br>
+    <a href="/about" class="btn btn-success">About</a>
+    <a href="/contact" class="btn btn-danger">Kontakt</a>
+    <a href="/forum" class="btn btn-primary">Komentlər</a>
+</div>
+{% for el in prs %}
+<div class="containers">
+<a href="{{el.id}}" class="btn btn-warning">{{el.title}}</a>
+<h2 style="color: white;">{{el.price}}₼</h2>
+<br>
+</div>
+{% endfor %}
+{% endblock %}
